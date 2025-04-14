@@ -1,0 +1,63 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
+  
+  mat-card {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-radius: 15px !important;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  mat-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  button {
+    transition: all 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    transform: scale(1.05);
+  }
+  
+  .mat-toolbar {
+    background: linear-gradient(90deg, #ff8c00, #ff0080) !important;
+  }
+  
+  .spacer {
+    flex: 1;
+  }
+  
+  @media (max-width: 768px) {
+    mat-card {
+      padding: 15px;
+    }
+  
+    button {
+      width: 100%;
+    }
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  mat-card {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  

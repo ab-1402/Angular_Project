@@ -1,0 +1,48 @@
+<div class="job-container">
+  <h2>Available Jobs</h2>
+
+  <div class="job-cards">
+    <mat-card *ngFor="let job of jobs" class="job-card">
+      <h3>{{ job.title }}</h3>
+      <p><strong>Role:</strong> {{ job.role }}</p>
+      <p><strong>Qualifications:</strong> {{ job.qualifications }}</p>
+      <p><strong>Description:</strong> {{ job.description }}</p>
+      <p><strong>Experience:</strong> {{ job.experience }} years</p>
+    </mat-card>
+  </div>
+
+  <div class="register-section">
+    <button mat-raised-button color="accent" (click)="showForm = !showForm">
+      {{ showForm ? 'Close Form' : 'Register Job' }}
+    </button>
+
+    <form *ngIf="showForm" (ngSubmit)="registerJob()" class="register-form">
+      <mat-form-field appearance="fill">
+        <mat-label>Job Title</mat-label>
+        <input matInput [(ngModel)]="newJob.title" name="title" required />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Role</mat-label>
+        <input matInput [(ngModel)]="newJob.role" name="role" required />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Qualifications</mat-label>
+        <input matInput [(ngModel)]="newJob.qualifications" name="qualifications" required />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Description</mat-label>
+        <textarea matInput [(ngModel)]="newJob.description" name="description" required></textarea>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Minimum Experience (Years)</mat-label>
+        <input matInput type="number" [(ngModel)]="newJob.experience" name="experience" required />
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit">Submit Job</button>
+    </form>
+  </div>
+</div>

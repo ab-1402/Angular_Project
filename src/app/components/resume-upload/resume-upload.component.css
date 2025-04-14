@@ -1,0 +1,22 @@
+.job-card {
+  margin: 20px;
+  padding: 20px;
+}
+
+.apply-card {
+  margin: 30px auto;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.apply-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.file-upload {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

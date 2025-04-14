@@ -1,0 +1,39 @@
+<!-- Available Jobs with Apply Buttons -->
+<mat-card>
+  <h2>Available Jobs</h2>
+
+  <div class="job-cards">
+    <mat-card *ngFor="let job of jobs" class="job-card">
+      <h3>{{ job.title }}</h3>
+      <p><strong>Role:</strong> {{ job.role }}</p>
+      <p><strong>Qualifications:</strong> {{ job.qualifications }}</p>
+      <p><strong>Description:</strong> {{ job.description }}</p>
+      <p><strong>Experience:</strong> {{ job.experience }} years</p>
+      <button mat-raised-button color="accent" (click)="openApplyForm(job)">Apply</button>
+    </mat-card>
+  </div>
+</mat-card>
+<!-- Apply Form Modal -->
+<mat-card *ngIf="showApplyForm" class="apply-card" #applyFormCard>
+  <h2>Apply for {{ selectedJob?.title }}</h2>
+
+  <form (ngSubmit)="submitApplication()" class="apply-form">
+    <mat-form-field appearance="fill">
+      <mat-label>Your Name</mat-label>
+      <input matInput [(ngModel)]="applicant.name" name="applicantName" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Qualification</mat-label>
+      <input matInput [(ngModel)]="applicant.qualification" name="qualification" required />
+    </mat-form-field>
+
+    <div class="file-upload">
+      <label for="resumeUpload">Upload Resume:</label>
+      <input type="file" id="resumeUpload" (change)="onResumeSelected($event)" accept=".pdf,.doc,.docx" required />
+    </div>
+
+    <button mat-raised-button color="primary" type="submit">Submit Application</button>
+    <button mat-button color="warn" (click)="cancelApplication()">Cancel</button>
+  </form>
+</mat-card>

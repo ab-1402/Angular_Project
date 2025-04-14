@@ -1,0 +1,32 @@
+mat-card {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 25px;
+    text-align: center;
+    position: relative;
+    top: 20%;
+  }
+  
+  table {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  th {
+    background: linear-gradient(45deg, #ff8c00, #ff0080);
+    color: white;
+  }
+  
+  td {
+    color: white;
+    text-align: center;
+  }
+  
+  @media (max-width: 600px) {
+    table {
+      font-size: 14px;
+    }
+  }
+  

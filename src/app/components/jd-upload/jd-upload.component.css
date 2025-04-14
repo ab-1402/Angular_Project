@@ -1,0 +1,28 @@
+.job-container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.job-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.job-card {
+  padding: 15px;
+}
+
+.register-section {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+  margin: 20px auto;
+}

@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'job-screening-dashboard';
+  userRole: 'hr' | 'applicant' | null = null;
+
+  selectRole(role: 'hr' | 'applicant') {
+    this.userRole = role;
+    // Optional: Navigate to dashboard or home
+  }
+
+  logout() {
+    this.userRole = null;
+  }
 }
