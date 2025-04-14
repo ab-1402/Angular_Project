@@ -23,6 +23,7 @@ import { JdUploadComponent } from './components/jd-upload/jd-upload.component';
 import { ResumeUploadComponent } from './components/resume-upload/resume-upload.component';
 import { CandidateMatchingComponent } from './components/candidate-matching/candidate-matching.component';
 import { InterviewSchedulerComponent } from './components/interview-scheduler/interview-scheduler.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { InterviewSchedulerComponent } from './components/interview-scheduler/in
     JdUploadComponent,
     ResumeUploadComponent,
     CandidateMatchingComponent,
-    InterviewSchedulerComponent
+    InterviewSchedulerComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
